@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "status": "active",
+  "name": "overlap-beta",
+  "displayName": "Overlap Beta (collision test)",
+  "description": "Test plugin B. Ships NO skills of its own; it depends on overlap-alpha and reuses overlap-alpha:mirror-skill. This is the Claude dedup path for the same skill that Cursor exposes via a symlink. Installing overlap-beta auto-installs overlap-alpha from the same marketplace.",
+  "version": "0.0.1",
+  "author": {
+    "name": "sherifabdlnaby"
+  },
+  "dependencies": ["overlap-alpha"],
+  "keywords": ["test", "overlap", "collision", "skills", "dependencies", "demo"]
+}

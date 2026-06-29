@@ -1,12 +1,13 @@
-# Overlap Beta — skill collision test
+# Overlap Beta — skill reuse test
 
-Test plugin **B** of a pair (`overlap-alpha` + `overlap-beta`) used to exercise how
-Cursor handles skills that share a name across plugins. No-op markers only.
+Test plugin **B** of a pair (`overlap-alpha` + `overlap-beta`). It ships **no skill of its
+own** and reuses `mirror-skill` from `overlap-alpha`, via a different mechanism per
+ecosystem. No-op markers only.
 
-| Skill | Behavior |
+| Ecosystem | Mechanism |
 |---|---|
-| `duplicate-skill` | replies with the **🅱️ beta** marker; description names overlap-beta as source |
-| `mirror-skill` | replies with the **🪞 mirror** marker; a symlink to overlap-alpha's canonical copy (identical name and description) |
+| Cursor | symlink `cursor-skills/mirror-skill` → `../../overlap-alpha/skills/mirror-skill`, surfaced by `"skills": ["./cursor-skills/mirror-skill"]` |
+| Claude Code | `"dependencies": ["overlap-alpha"]` — installing this plugin auto-installs overlap-alpha; skill is `overlap-alpha:mirror-skill` |
 
-`skills/mirror-skill` here is a directory symlink → `../../overlap-alpha/skills/mirror-skill`.
-See the repo root README for the full description of the two collision cases.
+The symlink is deliberately kept out of `skills/` so Claude's mandatory `skills/` scan
+doesn't load a duplicate. See the repo root README for the full rationale.

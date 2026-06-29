@@ -1,12 +1,11 @@
 {
   "name": "overlap-alpha",
   "displayName": "Overlap Alpha (collision test)",
-  "description": "Test plugin A for cross-plugin skill-name collisions. Ships a 'duplicate-skill' whose description names overlap-alpha as the source, plus the canonical 'mirror-skill' that overlap-beta re-exports verbatim via a symlink.",
+  "description": "Test plugin A for cross-plugin skill collisions. Ships the canonical 'mirror-skill'; overlap-beta re-exports it verbatim via a symlink (Cursor) or a plugin dependency (Claude).",
   "version": "1.0.0",
   "author": {
     "name": "sherifabdlnaby"
   },
-  "logo": "assets/logo.svg",
   "category": "testing",
   "keywords": ["test", "overlap", "collision", "skills", "cursor", "demo"]
 }

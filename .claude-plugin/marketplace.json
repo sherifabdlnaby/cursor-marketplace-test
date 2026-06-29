@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "cursor-plugins-test",
+  "description": "Test marketplace for exercising how Claude Code handles a skill shared across plugins via plugin dependencies.",
+  "version": "0.0.1",
+  "owner": {
+    "name": "sherifabdlnaby"
+  },
+  "plugins": [
+    {
+      "name": "overlap-alpha",
+      "source": "./plugins/overlap-alpha",
+      "category": "testing"
+    },
+    {
+      "name": "overlap-beta",
+      "source": "./plugins/overlap-beta",
+      "category": "testing"
+    }
+  ]
+}

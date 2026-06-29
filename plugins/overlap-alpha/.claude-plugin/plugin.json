@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "status": "active",
+  "name": "overlap-alpha",
+  "displayName": "Overlap Alpha (collision test)",
+  "description": "Test plugin A. Ships the canonical 'mirror-skill' (addressed as overlap-alpha:mirror-skill). overlap-beta reuses it by declaring a dependency on this plugin instead of shipping its own copy.",
+  "version": "0.0.1",
+  "author": {
+    "name": "sherifabdlnaby"
+  },
+  "keywords": ["test", "overlap", "collision", "skills", "dependencies", "demo"]
+}

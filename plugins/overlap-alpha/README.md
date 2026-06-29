@@ -1,11 +1,11 @@
-# Overlap Alpha — skill collision test
+# Overlap Alpha — skill reuse test
 
-Test plugin **A** of a pair (`overlap-alpha` + `overlap-beta`) used to exercise how
-Cursor handles skills that share a name across plugins. No-op markers only.
+Test plugin **A** of a pair (`overlap-alpha` + `overlap-beta`). Ships the **canonical**
+`mirror-skill`; `overlap-beta` reuses it (symlink in Cursor, dependency in Claude). No-op
+marker only.
 
 | Skill | Behavior |
 |---|---|
-| `duplicate-skill` | replies with the **🅰️ alpha** marker; description names overlap-alpha as source |
-| `mirror-skill` | replies with the **🪞 mirror** marker; canonical copy that overlap-beta symlinks to |
+| `mirror-skill` | replies with the **🪞 mirror** marker; addressed as `overlap-alpha:mirror-skill` in Claude |
 
-See the repo root README for the full description of the two collision cases.
+See the repo root README for how the skill is shared across both plugins.
