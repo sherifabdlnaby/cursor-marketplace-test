@@ -1,0 +1,19 @@
+{
+  "name": "cursor-plugins-test",
+  "metadata": {
+    "description": "Test marketplace for exercising how Cursor handles skill-name collisions across plugins."
+  },
+  "owner": {
+    "name": "sherifabdlnaby"
+  },
+  "plugins": [
+    {
+      "name": "overlap-alpha",
+      "source": "./plugins/overlap-alpha"
+    },
+    {
+      "name": "overlap-beta",
+      "source": "./plugins/overlap-beta"
+    }
+  ]
+}
